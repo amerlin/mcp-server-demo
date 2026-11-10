@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="src/McpDemo/McpDemo.csproj" />
+  <Project Path="tests/McpDemo.Tests/McpDemo.Tests.csproj" />
+</Solution>

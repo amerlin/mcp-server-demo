@@ -1,0 +1,17 @@
+{
+  "servers": {
+    "demo-dotnet10-iva": {
+      "type": "stdio",
+      "command": "dotnet",
+      "args": [
+        "run",
+        "--project",
+        "${workspaceFolder}/src/McpDemo/McpDemo.csproj",
+        "--no-build",
+        "--no-launch-profile",
+        "--",
+        "--stdio"
+      ]
+    }
+  }
+}
