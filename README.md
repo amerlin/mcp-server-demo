@@ -176,6 +176,7 @@ Questo è il messaggio del protocollo, non una richiesta HTTP completa: header, 
 - [.vscode/mcp.json](.vscode/mcp.json): collegamento stdio per Copilot.
 - [.vscode/launch.json](.vscode/launch.json): debug HTTP con F5.
 - [tests/McpDemo.Tests](tests/McpDemo.Tests): test unitari e di integrazione.
+- [flow.md](flow.md): diagramma e descrizione del flusso di funzionamento.
 - [ARCHITECTURE.md](ARCHITECTURE.md): motivazioni delle scelte principali.
 - [CHANGELOG.md](CHANGELOG.md): cronologia delle modifiche.
 
