@@ -8,7 +8,7 @@ Espone due tool didattici, utilizzabili da GitHub Copilot e da altri client MCP.
 
 MCP permette a un'applicazione AI di scoprire e invocare funzioni messe a disposizione da un server. Il modello non esegue direttamente il codice C#: è il client MCP a inviare la richiesta al server, che valida i parametri, esegue il tool e restituisce il risultato.
 
-Per una guida passo passo alla creazione di un server MCP in C# e .NET, vedere [CREARE-SERVER-MCP.md](CREARE-SERVER-MCP.md).
+Per una guida passo passo alla creazione di un server MCP in C# e .NET, vedere [CREARE-SERVER-MCP.md](docs/CREARE-SERVER-MCP.md).
 
 Il flusso è:
 
@@ -73,7 +73,7 @@ I test verificano validazione, arrotondamento, scoperta dei tool, esecuzione tra
 
 La configurazione pronta è in [.vscode/mcp.json](.vscode/mcp.json).
 
-Per una procedura passo passo dedicata alla prova dei tool in VS Code, vedere [TEST-VS-CODE.md](TEST-VS-CODE.md).
+Per una procedura passo passo dedicata alla prova dei tool in VS Code, vedere [TEST-VS-CODE.md](docs/TEST-VS-CODE.md).
 
 1. Eseguire `dotnet build` almeno una volta, in configurazione Debug. La configurazione MCP usa `--no-build` per non mescolare l'output della compilazione con i messaggi del protocollo su stdout.
 2. Aprire [.vscode/mcp.json](.vscode/mcp.json) e selezionare **Start / Avvia** sopra il server `demo-dotnet10-iva`. In alternativa usare **MCP: List Servers** dalla palette dei comandi e scegliere il server.
@@ -180,9 +180,10 @@ Questo è il messaggio del protocollo, non una richiesta HTTP completa: header, 
 - [.vscode/mcp.json](.vscode/mcp.json): collegamento stdio per Copilot.
 - [.vscode/launch.json](.vscode/launch.json): debug HTTP con F5.
 - [tests/McpDemo.Tests](tests/McpDemo.Tests): test unitari e di integrazione.
-- [flow.md](flow.md): diagramma e descrizione del flusso di funzionamento.
-- [ARCHITECTURE.md](ARCHITECTURE.md): motivazioni delle scelte principali.
-- [CHANGELOG.md](CHANGELOG.md): cronologia delle modifiche.
+- [flow.md](docs/flow.md): diagramma e descrizione del flusso di funzionamento.
+- [ARCHITECTURE.md](docs/ARCHITECTURE.md): motivazioni delle scelte principali.
+- [CHANGELOG.md](docs/CHANGELOG.md): cronologia delle modifiche.
+- [Scarica la presentazione PowerPoint](CREARE-SERVER-MCP.pptx).
 
 Per aggiungere un tool: creare un metodo in `DemoTools`, applicare `[McpServerTool]` e `[Description]`, descrivere i parametri, validare gli input, aggiungere test e ricompilare. Un metodo in una nuova classe va anche registrato con `.WithTools<NuovaClasse>()` in entrambi i rami di avvio.
 

@@ -170,4 +170,4 @@ Prova discovery (`tools/list`), chiamata (`tools/call`), validazione degli input
 - Non esporre una demo senza autenticazione su Internet.
 - Le annotazioni dei tool non sono controlli di sicurezza.
 
-**Approfondimenti:** `CREARE-SERVER-MCP.md` · `README.md` · `ARCHITECTURE.md`
+**Approfondimenti:** `CREARE-SERVER-MCP.md` · `../README.md` · `ARCHITECTURE.md`

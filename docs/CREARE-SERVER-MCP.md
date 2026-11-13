@@ -36,7 +36,7 @@ dotnet add package ModelContextProtocol.AspNetCore
 
 Il pacchetto ufficiale `ModelContextProtocol.AspNetCore` include le API server e il trasporto HTTP. Per usare `stdio` e HTTP nello stesso progetto demo è sufficiente lo stesso pacchetto.
 
-Nel progetto di esempio, il target framework e il riferimento al pacchetto sono dichiarati in [McpDemo.csproj](src/McpDemo/McpDemo.csproj):
+Nel progetto di esempio, il target framework e il riferimento al pacchetto sono dichiarati in [McpDemo.csproj](../src/McpDemo/McpDemo.csproj):
 
 ```xml
 <PropertyGroup>
@@ -53,7 +53,7 @@ Usare una versione dello SDK compatibile con il framework scelto e consultare la
 
 Un tool è un metodo C# marcato con `[McpServerTool]`. La classe che contiene uno o più metodi va marcata con `[McpServerToolType]`. Gli attributi `[Description]` documentano il tool e i parametri: lo SDK usa le firme e i metadati per ricavare le descrizioni e gli schemi da comunicare al client.
 
-Esempio semplificato, ispirato al tool `saluta` in [DemoTools.cs](src/McpDemo/Tools/DemoTools.cs):
+Esempio semplificato, ispirato al tool `saluta` in [DemoTools.cs](../src/McpDemo/Tools/DemoTools.cs):
 
 ```csharp
 using System.ComponentModel;
@@ -130,7 +130,7 @@ await builder.Build().RunAsync();
 
 In questa modalità **stdout è riservato ai messaggi del protocollo**: non scrivere log o messaggi diagnostici su stdout; indirizzarli a stderr. È la modalità usata dalla configurazione VS Code della demo.
 
-Un processo dovrebbe avviare un solo trasporto. In [Program.cs](src/McpDemo/Program.cs) la demo seleziona `stdio` quando riceve `--stdio`, altrimenti avvia HTTP. In entrambi i casi registra la stessa classe di tool, separando la logica applicativa dal trasporto.
+Un processo dovrebbe avviare un solo trasporto. In [Program.cs](../src/McpDemo/Program.cs) la demo seleziona `stdio` quando riceve `--stdio`, altrimenti avvia HTTP. In entrambi i casi registra la stessa classe di tool, separando la logica applicativa dal trasporto.
 
 ## 5. Collegare un client
 
@@ -175,10 +175,10 @@ Verificare almeno che:
 - i tool siano visibili al client;
 - la chiamata e la serializzazione del risultato funzionino sul trasporto scelto.
 
-Nel repository, i test unitari dei tool e i test di integrazione per HTTP e `stdio` sono nel progetto [McpDemo.Tests](tests/McpDemo.Tests).
+Nel repository, i test unitari dei tool e i test di integrazione per HTTP e `stdio` sono nel progetto [McpDemo.Tests](../tests/McpDemo.Tests).
 
 ## 7. Considerazioni per un server reale
 
 La demo è locale e non implementa autenticazione. Prima di esporre un server su una rete o in produzione, progettare autenticazione e autorizzazione, HTTPS, controllo dell'origine, limiti di richiesta, logging e gestione dei segreti. Validare sempre gli input e limitare gli effetti dei tool ai privilegi strettamente necessari. Non considerare le annotazioni dei tool come controlli di sicurezza.
 
-Per i dettagli operativi della demo, inclusi Inspector, avvio e debug, vedere [README.md](README.md). Per le scelte architetturali vedere [ARCHITECTURE.md](ARCHITECTURE.md).
+Per i dettagli operativi della demo, inclusi Inspector, avvio e debug, vedere [README.md](../README.md). Per le scelte architetturali vedere [ARCHITECTURE.md](ARCHITECTURE.md).

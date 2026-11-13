@@ -103,4 +103,4 @@ Per verificare la validazione, si può chiedere un imponibile negativo: il tool 
 | Il tool non viene chiamato | Usare Copilot Chat in modalità Agent e formulare una richiesta esplicita, indicando il nome del tool. |
 | Le modifiche non si riflettono | Ricompilare con `dotnet build`, quindi arrestare e riavviare il server MCP. |
 
-Per ulteriori dettagli sul progetto, sulla modalità HTTP e su MCP Inspector, vedere [README.md](README.md).
+Per ulteriori dettagli sul progetto, sulla modalità HTTP e su MCP Inspector, vedere [README.md](../README.md).
