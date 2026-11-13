@@ -8,6 +8,8 @@ Espone due tool didattici, utilizzabili da GitHub Copilot e da altri client MCP.
 
 MCP permette a un'applicazione AI di scoprire e invocare funzioni messe a disposizione da un server. Il modello non esegue direttamente il codice C#: è il client MCP a inviare la richiesta al server, che valida i parametri, esegue il tool e restituisce il risultato.
 
+Per una guida passo passo alla creazione di un server MCP in C# e .NET, vedere [CREARE-SERVER-MCP.md](CREARE-SERVER-MCP.md).
+
 Il flusso è:
 
 1. Il client stabilisce la comunicazione e negozia le capacità del server tramite lo SDK.
@@ -70,6 +72,8 @@ I test verificano validazione, arrotondamento, scoperta dei tool, esecuzione tra
 ## 4. Utilizzo da VS Code e GitHub Copilot
 
 La configurazione pronta è in [.vscode/mcp.json](.vscode/mcp.json).
+
+Per una procedura passo passo dedicata alla prova dei tool in VS Code, vedere [TEST-VS-CODE.md](TEST-VS-CODE.md).
 
 1. Eseguire `dotnet build` almeno una volta, in configurazione Debug. La configurazione MCP usa `--no-build` per non mescolare l'output della compilazione con i messaggi del protocollo su stdout.
 2. Aprire [.vscode/mcp.json](.vscode/mcp.json) e selezionare **Start / Avvia** sopra il server `demo-dotnet10-iva`. In alternativa usare **MCP: List Servers** dalla palette dei comandi e scegliere il server.

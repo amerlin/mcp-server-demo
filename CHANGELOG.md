@@ -1,5 +1,10 @@
 # Changelog
 
+## [Unreleased]
+
+### Documentazione
+- Aggiunta una guida in italiano ai componenti, ai trasporti, alla creazione dei tool e alla verifica di un server MCP.
+
 ## [1.0.0] - 2026-11-10
 
 ### Aggiunto
